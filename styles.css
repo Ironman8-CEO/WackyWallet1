@@ -30,23 +30,49 @@ header {
     color: #fff;
 }
 
-/* Adjust the header for smaller screens */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     header {
         height: auto; /* Allow height to adjust dynamically */
-        aspect-ratio: auto 16 / 9; /* Maintain image aspect ratio */
-        background-size: contain; /* Make the full image visible */
-        background-repeat: no-repeat; /* Avoid repeating image */
-        background-position: center;
-        padding: 20px 0; /* Add some spacing for content */
+        min-height: 70vh; /* Ensure header doesn't collapse */
+        background-size: contain; /* Ensure the entire image is visible */
+        background-repeat: no-repeat; /* Prevent tiling of the image */
+        background-position: center; /* Keep the image centered */
+        padding: 20px 0; /* Add spacing around content */
     }
 
     header h1 {
-        font-size: 2.5em;
+        font-size: 2em; /* Reduce font size for smaller screens */
+        margin-bottom: 10px;
     }
 
     header p {
-        font-size: 1.2em;
+        font-size: 1em; /* Adjust paragraph font size */
+        margin: 0 10px; /* Add some horizontal spacing */
+    }
+
+    header button {
+        font-size: 1em;
+        padding: 10px 20px;
     }
 }
 
+/* Optional: Add extra styling for very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        min-height: 50vh; /* Further reduce height for very small screens */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Slightly smaller heading */
+    }
+
+    header p {
+        font-size: 0.9em; /* Reduce paragraph font size */
+    }
+
+    header button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
