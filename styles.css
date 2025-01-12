@@ -22,57 +22,41 @@ nav {
 header {
     height: 100vh;
     background: url('WACKY1.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
+    transition: background-size 0.3s ease; /* Smooth transition on resizing */
 }
 
-/* Responsive adjustments for smaller screens */
+/* Mobile optimization */
 @media (max-width: 768px) {
     header {
-        height: auto; /* Allow height to adjust dynamically */
-        min-height: 70vh; /* Ensure header doesn't collapse */
-        background-size: contain; /* Ensure the entire image is visible */
-        background-repeat: no-repeat; /* Prevent tiling of the image */
+        height: 70vh; /* Reduce the header height on smaller screens */
+        background-size: contain; /* Ensure the image is fully visible */
         background-position: center; /* Keep the image centered */
-        padding: 20px 0; /* Add spacing around content */
     }
 
     header h1 {
-        font-size: 2em; /* Reduce font size for smaller screens */
-        margin-bottom: 10px;
+        font-size: 2.5em; /* Adjust font size for smaller screens */
     }
 
     header p {
-        font-size: 1em; /* Adjust paragraph font size */
-        margin: 0 10px; /* Add some horizontal spacing */
+        font-size: 1.2em; /* Adjust font size for better readability */
+        padding: 0 20px; /* Add some padding on the sides for better text spacing */
     }
 
-    header button {
-        font-size: 1em;
-        padding: 10px 20px;
+    nav {
+        padding: 10px 0; /* Reduce padding for mobile navigation */
     }
 }
 
-/* Optional: Add extra styling for very small screens (max-width: 480px) */
-@media (max-width: 480px) {
-    header {
-        min-height: 50vh; /* Further reduce height for very small screens */
-    }
-
-    header h1 {
-        font-size: 1.8em; /* Slightly smaller heading */
-    }
-
-    header p {
-        font-size: 0.9em; /* Reduce paragraph font size */
-    }
-
-    header button {
-        font-size: 0.9em;
-        padding: 8px 16px;
-    }
+/* Optionally, you can add a max-width or max-height for the image to ensure it's not too large */
+header img {
+    max-width: 100%;
+    height: auto;
 }
