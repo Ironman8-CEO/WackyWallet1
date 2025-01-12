@@ -19,8 +19,6 @@ nav {
     z-index: 1000;
 }
 
-/* Add all your other CSS rules here... */
-
 header {
     height: 100vh;
     background: url('WACKY1.jpg') center/cover no-repeat;
@@ -32,11 +30,15 @@ header {
     color: #fff;
 }
 
+/* Adjust the header for smaller screens */
 @media (max-width: 768px) {
     header {
-        height: 70vh;
-        background-size: contain;
+        height: auto; /* Allow height to adjust dynamically */
+        aspect-ratio: auto 16 / 9; /* Maintain image aspect ratio */
+        background-size: contain; /* Make the full image visible */
+        background-repeat: no-repeat; /* Avoid repeating image */
         background-position: center;
+        padding: 20px 0; /* Add some spacing for content */
     }
 
     header h1 {
@@ -47,3 +49,4 @@ header {
         font-size: 1.2em;
     }
 }
+
