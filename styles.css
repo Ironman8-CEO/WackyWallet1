@@ -13,7 +13,7 @@ header {
 /* Mobile optimization */
 @media (max-width: 768px) {
     header {
-        height: 80vh; /* Adjust height for better fit */
+        height: 70vh; /* Adjust height for better fit */
         background-size: cover; /* Ensures the image still covers the section */
         background-position: center top; /* Focus on the top part for mobile */
     }
