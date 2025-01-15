@@ -11,8 +11,7 @@ body {
 /* Navigation */
 nav {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow tabs to wrap if necessary */
+    justify-content: space-evenly; /* Evenly space out navigation links */
     background-color: #1c1c1c; /* Darker nav background */
     padding: 1rem;
 }
@@ -20,14 +19,26 @@ nav {
 nav a {
     color: #ffc107; /* Yellow nav links */
     text-decoration: none;
-    margin: 0.5rem; /* Adjusted margin for better spacing on mobile */
     font-weight: 700;
     transition: color 0.3s;
-    font-size: 1rem; /* Slightly smaller font for better fit on mobile */
+    font-size: 1.1rem; /* Adjusted for consistency */
+    white-space: nowrap; /* Prevent links from breaking into two lines */
 }
 
 nav a:hover {
     color: #ff6347; /* Subtle orange hover */
+}
+
+/* Ensure proper spacing on mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Allow wrapping of links if needed */
+    }
+
+    nav a {
+        font-size: 1rem; /* Slightly smaller font size for small screens */
+        margin: 0.5rem 0; /* Add some vertical spacing between links */
+    }
 }
 
 /* Header Section */
@@ -192,4 +203,5 @@ footer {
     font-size: 0.875rem;
     margin-top: 3rem;
 }
+
 
