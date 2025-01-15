@@ -1,6 +1,6 @@
 header {
     height: 100vh; /* Full viewport height for desktops */
-    background: url('WACKY1.jpg') no-repeat center;
+    background: url('WACKY6.jpg') no-repeat center;
     background-size: cover; /* Ensures the image scales properly */
     display: flex;
     flex-direction: column;
