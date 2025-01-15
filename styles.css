@@ -1,5 +1,5 @@
 header {
-    height: 100vh; /* Full screen height */
+    height: 100vh; /* Full height */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,9 +7,7 @@ header {
     text-align: center;
     color: #fff;
     position: relative;
-    overflow: hidden; /* Keep it hidden for overflow issues */
-    box-sizing: border-box; /* Ensure padding is included */
-    padding: 0 20px; /* Add padding for better text spacing */
+    overflow: hidden; /* No scrollbars */
 }
 
 header::before {
@@ -20,43 +18,19 @@ header::before {
     width: 100%;
     height: 100%;
     background: url('WACKY1.jpg') center center no-repeat;
-    background-size: cover; /* Ensure the image covers the entire area */
-    z-index: -1; /* Place the image behind the text */
-    background-color: #000; /* Fallback for uncovered areas */
+    background-size: cover; /* Scale image to fill */
+    z-index: -1; /* Behind content */
+    background-color: #000; /* Optional fallback */
 }
 
 header h1,
 header p,
 header a {
-    z-index: 1; /* Ensure text stays visible above the background */
-    margin: 0; /* Remove default margins for better alignment */
-    padding: 10px 0; /* Add consistent padding */
+    z-index: 1; /* Keep text above background */
 }
 
 @media (max-width: 768px) {
-    header {
-        height: 100vh; /* Maintain the full height on smaller screens */
-    }
-    
     header::before {
-        background-size: cover; /* Ensure the image covers the screen */
-        background-position: center; /* Keep the image centered */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Adjust font size for smaller screens */
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    header a {
-        font-size: 1rem;
-        padding: 10px 20px;
-        border: 1px solid #fff;
-        text-decoration: none;
-        color: #fff;
-        border-radius: 5px;
+        background-size: cover; /* Fix scaling on mobile */
     }
 }
