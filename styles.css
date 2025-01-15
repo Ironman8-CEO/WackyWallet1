@@ -1,2 +1,22 @@
+header {
+    height: 100vh;
+    background: url('WACKY1.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    header {
+        height: 70vh; /* Reduced height for smaller screens */
+        background-size: contain; /* Adjust the background size to fit the screen */
+        background-position: center top; /* Keep the image centered but focus on the top part */
+    }
+}
 
 
