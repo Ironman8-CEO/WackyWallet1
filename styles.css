@@ -3,8 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
+    background-color: #121212; /* Dark background for a sleek look */
+    color: #e0e0e0; /* Light text color for contrast */
     line-height: 1.6;
 }
 
@@ -12,20 +12,22 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #333;
+    flex-wrap: wrap; /* Allow tabs to wrap if necessary */
+    background-color: #1c1c1c; /* Darker nav background */
     padding: 1rem;
 }
 
 nav a {
-    color: #fff;
+    color: #ffc107; /* Yellow nav links */
     text-decoration: none;
-    margin: 0 1rem;
+    margin: 0.5rem; /* Adjusted margin for better spacing on mobile */
     font-weight: 700;
     transition: color 0.3s;
+    font-size: 1rem; /* Slightly smaller font for better fit on mobile */
 }
 
 nav a:hover {
-    color: #ff6347;
+    color: #ff6347; /* Subtle orange hover */
 }
 
 /* Header Section */
@@ -36,7 +38,7 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #ffc107; /* Yellow text for header */
     position: relative;
     overflow: hidden;
 }
@@ -49,25 +51,38 @@ header::before {
     width: 100%;
     height: 100%;
     background: url('WACKY1.jpg') center center no-repeat;
-    background-size: cover;
+    background-size: cover; /* Ensures the image fills the header */
     z-index: -1;
     background-color: #000;
 }
 
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    header {
+        height: 70vh; /* Reduce height for smaller screens */
+    }
+
+    header::before {
+        background: url('WACKY1.jpg') center center no-repeat;
+        background-size: contain; /* Ensures no part of the image is cut off */
+    }
+}
+
+/* Header Text */
 header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjust font size for smaller screens */
     margin-bottom: 1rem;
 }
 
 header p {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
     margin-bottom: 1.5rem;
 }
 
 header a {
-    padding: 0.75rem 1.5rem;
-    background-color: #ff6347;
-    color: #fff;
+    padding: 0.5rem 1rem; /* Smaller button for mobile */
+    background-color: #ffc107; /* Yellow button */
+    color: #000; /* Black text for contrast */
     text-decoration: none;
     font-weight: 700;
     border-radius: 5px;
@@ -75,7 +90,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #e5533c;
+    background-color: #ffcb47; /* Lighter yellow on hover */
 }
 
 /* Section Styling */
@@ -87,7 +102,7 @@ header a:hover {
 .section h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
-    color: #333;
+    color: #ffc107; /* Yellow headings */
 }
 
 /* Grid Layout */
@@ -100,29 +115,29 @@ header a:hover {
 
 /* Box Styling */
 .box {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #1e1e1e; /* Dark background for boxes */
+    border: 1px solid #444; /* Subtle border */
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-align: left;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
 .box h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #ff6347;
+    color: #ff6347; /* Red heading text */
 }
 
 .box p {
     font-size: 1rem;
-    color: #666;
+    color: #b0b0b0; /* Light gray for body text */
 }
 
 /* Roadmap Image */
@@ -134,10 +149,10 @@ header a:hover {
 
 /* About Section */
 .about-box {
-    background-color: #fff;
+    background-color: #1e1e1e; /* Same dark box styling */
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-align: left;
 }
 
@@ -165,13 +180,13 @@ header a:hover {
 
 .socials img:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #1c1c1c; /* Dark footer background */
+    color: #e0e0e0; /* Light text */
     text-align: center;
     padding: 1rem 0;
     font-size: 0.875rem;
