@@ -1,27 +1,41 @@
+/* General styling for the header */
 header {
     height: 100vh; /* Full viewport height */
-    background: url('WACKY1.jpg') center center / cover no-repeat;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #fff;
+    overflow: hidden; /* Ensure no extra space is visible */
 }
 
+/* Set the background image to always fit */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('WACKY1.jpg') center center no-repeat;
+    background-size: contain; /* Contain the image to show everything */
+    background-color: #000; /* Optional: background color for empty space */
+    z-index: -1; /* Send the background behind the content */
+}
+
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
     header {
-        height: auto; /* Allow the height to adjust dynamically */
-        padding: 20px; /* Add padding for better spacing */
-        background: none; /* Remove background image for this section */
+        height: auto; /* Adjust height dynamically for content */
+        padding: 20px;
     }
 
-    header img {
-        max-width: 100%; /* Ensure the image fits within the screen */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: contain; /* Ensure the full image is displayed */
-        border-radius: 10px; /* Optional: add rounded edges */
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Optional: add shadow for aesthetics */
+    header::before {
+        background-size: contain; /* Ensure the entire image fits */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #000; /* Maintain background color on smaller screens */
     }
 }
-
