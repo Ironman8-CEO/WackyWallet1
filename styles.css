@@ -4,9 +4,10 @@ header {
     background-size: cover; /* Ensures the image scales properly */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Align content towards the top */
     align-items: center;
     text-align: center;
+    padding-top: 50px; /* Moves content down */
     color: #fff;
 }
 
@@ -16,5 +17,6 @@ header {
         height: 70vh; /* Adjust height for better fit */
         background-size: cover; /* Ensures the image still covers the section */
         background-position: center top; /* Focus on the top part for mobile */
+        padding-top: 30px; /* Smaller padding for mobile devices */
     }
 }
