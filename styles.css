@@ -1,5 +1,36 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff6347;
+}
+
+/* Header Section */
 header {
-    height: 100vh; /* Full height */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,7 +38,7 @@ header {
     text-align: center;
     color: #fff;
     position: relative;
-    overflow: hidden; /* No scrollbars */
+    overflow: hidden;
 }
 
 header::before {
@@ -18,19 +49,132 @@ header::before {
     width: 100%;
     height: 100%;
     background: url('WACKY1.jpg') center center no-repeat;
-    background-size: cover; /* Scale image to fill */
-    z-index: -1; /* Behind content */
-    background-color: #000; /* Optional fallback */
+    background-size: cover;
+    z-index: -1;
+    background-color: #000;
 }
 
-header h1,
-header p,
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
 header a {
-    z-index: 1; /* Keep text above background */
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 768px) {
-    header::before {
-        background-size: cover; /* Fix scaling on mobile */
-    }
+header a:hover {
+    background-color: #e5533c;
 }
+
+/* Section Styling */
+.section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Box Styling */
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ff6347;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Roadmap Image */
+.roadmap-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/* About Section */
+.about-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Social Icons */
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.socials a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.socials img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.socials img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.875rem;
+    margin-top: 3rem;
+}
+
