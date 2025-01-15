@@ -1,22 +1,22 @@
 header {
-    height: 100vh; /* Full viewport height for desktops */
+    height: 110vh; /* Slightly increase height to create more space */
     background: url('WACKY6.jpg') no-repeat center;
     background-size: cover; /* Ensures the image scales properly */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align content towards the top */
+    justify-content: flex-start; /* Push content towards the top */
     align-items: center;
     text-align: center;
-    padding-top: 50px; /* Moves content down */
+    padding-top: 100px; /* Moves content further down */
     color: #fff;
 }
 
 /* Mobile optimization */
 @media (max-width: 768px) {
     header {
-        height: 70vh; /* Adjust height for better fit */
+        height: 80vh; /* Adjust height for better fit */
         background-size: cover; /* Ensures the image still covers the section */
         background-position: center top; /* Focus on the top part for mobile */
-        padding-top: 30px; /* Smaller padding for mobile devices */
+        padding-top: 50px; /* Moves content down for smaller screens */
     }
 }
