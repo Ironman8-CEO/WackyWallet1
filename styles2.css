@@ -1,0 +1,80 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background-color: #000000; /* Black navigation bar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid #ff4081; /* Pink accent border */
+}
+
+.nav-link {
+    color: #ffdd33; /* Yellow link text */
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff4081; /* Pink hover effect */
+}
+
+/* Launch Container */
+.launch-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #1c1c1c; /* Slightly lighter than the background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ffdd33; /* Yellow title */
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text */
+    margin-bottom: 30px;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #ff4081; /* Pink for key details */
+}
+
+.details li strong {
+    color: #ffffff; /* White for emphasis */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000000; /* Black footer */
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 2px solid #ff4081; /* Pink accent */
+}
