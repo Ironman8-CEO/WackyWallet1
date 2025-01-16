@@ -19,18 +19,38 @@
         }
 
         nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    nav a {
+        color: #ffca28;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 5px 15px;
+        margin: 0 10px;
+        transition: 0.3s;
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        color: #ff4081;
+    }
+
+
+        .nav-links {
             display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 15px 0;
-            z-index: 1000;
+            gap: 20px;
         }
 
-        nav a {
+        .nav-links a {
             color: #ffca28;
             text-decoration: none;
             font-weight: bold;
@@ -38,8 +58,59 @@
             transition: 0.3s;
         }
 
-        nav a:hover {
+        .nav-links a:hover {
             color: #ff4081;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 30px;
+            height: 4px;
+            background-color: #ffca28;
+            transition: 0.3s;
+        }
+
+        .nav-mobile {
+            display: none;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .nav-mobile a {
+            color: #ffca28;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .nav-mobile a:hover {
+            color: #ff4081;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
         }
 
         header {
@@ -132,7 +203,7 @@
         }
 
         .roadmap-image {
-            max-width: 40%; /* Reduced size */
+            max-width: 40%;
             margin-top: 20px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
@@ -150,9 +221,9 @@
         }
 
         .socials img {
-            width: 50px; /* Fixed width */
-            height: 50px; /* Fixed height */
-            object-fit: cover; /* Prevent stretching */
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
             transition: transform 0.3s;
         }
 
@@ -203,12 +274,27 @@
 </head>
 <body>
     <nav>
-        <a href="#welcome">Welcome</a>
-        <a href="#features">Features</a>
-        <a href="#tokenomics">Tokenomics</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="fair-launch.html" class="fair-launch-button">Fair Launch</a>
-        <a href="#about">About Us</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#welcome">Welcome</a>
+            <a href="#features">Features</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="fair-launch.html" class="fair-launch-button">Fair Launch</a>
+            <a href="#about">About Us</a>
+        </div>
+        <div class="nav-mobile">
+            <a href="#welcome">Welcome</a>
+            <a href="#features">Features</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="fair-launch.html" class="fair-launch-button">Fair Launch</a>
+            <a href="#about">About Us</a>
+        </div>
     </nav>
 
     <header id="welcome">
@@ -325,7 +411,14 @@
         <p>Disclaimer: This is not financial advice. Always DYOR before investing.</p>
         <p>&copy; 2025 WackyWallet. All rights reserved.</p>
     </footer>
-    <script src="wacky.js"></script>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navMobile = document.querySelector('.nav-mobile');
+
+        hamburger.addEventListener('click', () => {
+            navMobile.style.display = navMobile.style.display === 'flex' ? 'none' : 'flex';
+            
+        });
+    </script>
 </body>
 </html>
-
