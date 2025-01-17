@@ -29,6 +29,7 @@ nav {
     flex-direction: column;
     gap: 4px;
     padding: 20px;
+    margin-left: auto;
 }
 
 .hamburger div {
