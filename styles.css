@@ -19,7 +19,7 @@ nav {
     display: flex;
     justify-content: space-between; /* Moves hamburger to one side */
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     z-index: 1000;
 }
 
