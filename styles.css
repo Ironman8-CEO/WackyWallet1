@@ -58,7 +58,7 @@ nav {
 .nav-mobile {
     display: none;
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 0px;
 }
