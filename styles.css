@@ -60,7 +60,7 @@ nav {
     flex-direction: column;
     gap: 10px;
     background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
+    padding: 0px;
 }
 
 @media (max-width: 768px) {
